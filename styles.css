@@ -3,8 +3,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
-/* variables for colors */
+/* variable declaration */
 :root {
   --white-bg: #ffffff;
   --icon-bg: #d9d9d9;
@@ -152,6 +153,7 @@ main {
   transition: 0.5s;
 }
 
+/* Mobile and small tablets screen */
 @media (max-width: 768px) {
   .sidebar {
     padding: 1rem;
@@ -166,12 +168,40 @@ main {
     margin: 0.5rem 0;
   }
 }
-
-@media (min-width: 768px) and (max-width: 1440px) {
+/* Bigger tablets screen */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    padding: 2rem 0.5rem;
+  }
   .sidebar-item {
     padding: 0.75rem 0.5rem;
   }
   hr {
     margin: 1rem 0;
+  }
+  main {
+    padding: 2rem 1rem;
+  }
+  .navbar {
+    gap: 1rem;
+  }
+  .search-box,
+  .notification-chat {
+    width: 50%;
+  }
+}
+/* Laptops screen */
+@media (min-width: 1024px) and (max-width: 1340px) {
+  hr {
+    margin: 1rem 0;
+  }
+  .sidebar-item {
+    padding: 0.75rem 0.5rem;
+  }
+  .search-box {
+    width: 60%;
+  }
+  .notification-chat {
+    width: 40%;
   }
 }
