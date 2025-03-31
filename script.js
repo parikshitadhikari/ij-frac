@@ -15,7 +15,7 @@ document.querySelector(".navbar").addEventListener("click", (event) => {
     alert("Chat clicked!");
   } else if (target.classList.contains("gallery-icon")) {
     alert("Gallery clicked!");
-  } else {
+  } else if (target.closest(".user-menu")) {
     alert(
       `User menu clicked: ${document.querySelector(".user-name").textContent}`
     );
