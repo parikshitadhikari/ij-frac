@@ -80,7 +80,7 @@ main {
 }
 
 /* header-navbar css codes */
-.navbar {
+.header {
   display: flex;
   gap: 2rem;
 }
@@ -182,7 +182,7 @@ main {
   main {
     padding: 2rem 1rem;
   }
-  .navbar {
+  .header {
     gap: 1rem;
   }
   .search-box,
