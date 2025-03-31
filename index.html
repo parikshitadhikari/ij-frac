@@ -20,6 +20,7 @@
       />
       <!-- All items of sidebar -->
       <nav class="sidebar-nav">
+        <!-- List of top items -->
         <ul class="sidebar-items">
           <li>
             <a href="#" class="sidebar-item active">
@@ -51,6 +52,7 @@
           </li>
         </ul>
         <hr />
+        <!-- List of middle items -->
         <ul class="sidebar-items">
           <li>
             <a href="#" class="sidebar-item">
@@ -65,7 +67,7 @@
             </a>
           </li>
         </ul>
-
+        <!-- List of bottom items -->
         <ul class="sidebar-items" id="sidebar-bottom">
           <li>
             <a href="#" class="sidebar-item">
@@ -81,10 +83,42 @@
       </nav>
     </aside>
 
-    <!-- main content wrapper (right side content)-->
+    <!-- Main content wrapper (right side content)-->
     <main class="content">
       <!-- Header - Navbar component -->
-      <header class="navbar"></header>
+      <header class="navbar">
+        <!-- Search box div -->
+        <div class="search-box">
+          <img
+            src="./assets/header-icons/search.svg"
+            alt="search"
+            class="search-icon"
+          />
+          <input type="text" placeholder="Search here..." />
+        </div>
+        <!-- Notification, chat and profile div -->
+        <div class="notification-chat">
+          <img
+            src="./assets/header-icons/bell.svg"
+            alt="notification"
+            class="notification-icon"
+          />
+          <img
+            src="./assets/header-icons/chat.svg"
+            alt="chat"
+            class="chat-icon"
+          />
+          <img
+            src="./assets/sidebar-icons/gallery.svg"
+            alt="gallery"
+            class="gallery-icon"
+          />
+          <div class="user-menu">
+            <p class="user-name">Mirie Kiritani</p>
+            <img src="./assets/header-icons/downarrow.svg" alt="arr" />
+          </div>
+        </div>
+      </header>
 
       <!-- Overview and Saving Plan component -->
       <section class="overview-saving"></section>

@@ -9,6 +9,9 @@
   --white-bg: #ffffff;
   --icon-bg: #d9d9d9;
   --sidebar-font: #0d163a;
+  --content-bg: #f7f7fb;
+  --search-font: #667085;
+  --notification-icon: #dedede;
 }
 
 body {
@@ -22,10 +25,13 @@ body {
   height: 100vh;
   background-color: var(--white-bg);
   padding: 2rem;
+  width: 20%;
 }
 .icon {
-  padding: 0.75rem 4.25rem;
+  width: 90%;
+  height: 2.75rem;
   background-color: var(--icon-bg);
+  padding: 0.5rem;
   margin-bottom: 2rem;
 }
 .sidebar-nav {
@@ -61,6 +67,89 @@ hr {
 /* pushes last section to bottom */
 #sidebar-bottom {
   margin-top: auto;
+}
+
+/* css code for main-content */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background-color: var(--content-bg);
+  padding: 2rem;
+}
+
+/* header-navbar css codes */
+.navbar {
+  display: flex;
+  gap: 2rem;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  background-color: var(--white-bg);
+  border-radius: 6rem;
+  padding: 1rem;
+}
+
+.search-icon {
+  margin-right: 1rem;
+}
+
+.search-box input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--search-font);
+}
+.search-box input::placeholder {
+  color: var(--search-font);
+}
+/* notification, chat and profile css codes */
+.notification-chat {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--white-bg);
+  width: 30%;
+  border-radius: 6rem;
+}
+.notification-icon,
+.chat-icon {
+  border: 1px solid var(--notification-icon);
+  padding: 0.4rem 1rem;
+  border-radius: 6rem;
+}
+.notification-icon:hover,
+.chat-icon:hover {
+  background-color: var(--icon-bg);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery-icon {
+  background-color: var(--icon-bg);
+  padding: 0.4rem;
+  border-radius: 50%;
+  border: 1px solid var(--icon-bg);
+}
+.gallery-icon:hover {
+  background-color: var(--white-bg);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.user-menu {
+  color: var(--sidebar-font);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.user-menu:hover {
+  cursor: pointer;
+  color: #0d163a9f;
+  transition: 0.5s;
 }
 
 @media (max-width: 768px) {
