@@ -1,0 +1,63 @@
+/* resetting paddding and margins */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* color variable declaration */
+:root {
+  --white-bg: #ffffff;
+  --icon-bg: #d9d9d9;
+  --sidebar-font: #0d163a;
+}
+body {
+  display: flex;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--white-bg);
+  padding: 0 2rem;
+}
+.icon {
+  background-color: var(--icon-bg);
+  width: 1.5rem;
+  padding: 1rem 4rem;
+  margin: 2rem 0;
+}
+.sidebar-item {
+  color: var(--sidebar-font);
+  text-align: left;
+}
+.sidebar-item:hover {
+  font-weight: 600;
+}
+.active {
+  font-weight: 600;
+}
+.sidebar-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.sidebar-items div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+hr {
+  color: var(--sidebar-font);
+  opacity: 30%;
+  margin: 1.5rem 0;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  margin-bottom: 2rem;
+}

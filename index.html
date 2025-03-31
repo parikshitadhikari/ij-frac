@@ -5,10 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- sidebar component -->
-    <aside></aside>
+    <aside class="sidebar">
+      <img
+        src="./assets/sidebar-icons/gallery.svg"
+        alt="gallery"
+        class="icon"
+      />
+      <div class="sidebar-items sidebar-top">
+        <div>
+          <img src="./assets/sidebar-icons/dashboard.svg" alt="dsh" />
+          <a href="#" class="sidebar-item active">Dashboard</a>
+        </div>
+        <div>
+          <img src="./assets/sidebar-icons/schedule.svg" alt="sch" />
+          <a href="#" class="sidebar-item">Schedule</a>
+        </div>
+        <div>
+          <img src="./assets/sidebar-icons/message.svg" alt="msg" />
+          <a href="#" class="sidebar-item">Message</a>
+        </div>
+        <div>
+          <img src="./assets/sidebar-icons/analytics.svg" alt="anlts" />
+          <a href="#" class="sidebar-item">Analytics</a>
+        </div>
+        <div>
+          <img src="./assets/sidebar-icons/team.svg" alt="team" />
+          <a href="#" class="sidebar-item">Team</a>
+        </div>
+      </div>
+      <hr />
+      <div class="sidebar-items sidebar-middle">
+        <div>
+          <img src="./assets/sidebar-icons/profile.svg" alt="prfl" />
+          <a href="#" class="sidebar-item">Profile</a>
+        </div>
+        <div>
+          <img src="./assets/sidebar-icons/schedule.svg" alt="stng" />
+          <a href="#" class="sidebar-item">Settings</a>
+        </div>
+      </div>
+
+      <div class="sidebar-items sidebar-bottom">
+        <div>
+          <img src="./assets/sidebar-icons/help.svg" alt="help" />
+          <a href="#" class="sidebar-item">Help</a>
+        </div>
+        <div>
+          <img src="./assets/sidebar-icons/logout.svg" alt="lgt" />
+          <a href="#" class="sidebar-item">Logout</a>
+        </div>
+      </div>
+    </aside>
     <!-- main content wrapper (right side content)-->
     <main class="content">
       <!-- Header - Navbar component -->
