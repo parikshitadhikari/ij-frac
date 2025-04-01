@@ -153,7 +153,7 @@ main {
   transition: 0.5s;
 }
 /* Overview and Saving Plan css */
-.overview-saving {
+.overview-savingplan {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -162,7 +162,7 @@ main {
   width: 100%;
 }
 .overview-card,
-.saving-card {
+.savingplan-card {
   background-color: var(--white-bg);
   border-radius: 1rem;
   padding: 1rem;
@@ -185,7 +185,6 @@ main {
 .individual-finance-card-active .finance-card-amount img {
   color: var(--white-bg) !important;
 }
-
 #balance:hover,
 #saving:hover,
 #expenses:hover,
@@ -250,23 +249,22 @@ main {
   justify-content: space-between;
   margin-top: 0.25rem;
 }
-.saving-card {
+/* saving plan css */
+.savingplan-card {
   width: 30%;
 }
-.saving-card:hover {
+.savingplan-card:hover {
   transform: scale(1.01);
   transition: 0.3s;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
-.saving-card hr{
+.savingplan-card hr {
   margin: 1rem 0;
 }
-.saving-card-header {
+.savingplan-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-bottom: 0.5rem; */
-  /* border: 1px solid var(--notification-icon); */
 }
 #see-all-btn {
   background-color: transparent;
@@ -296,17 +294,18 @@ h5 {
   font-weight: 400;
   font-size: 0.75rem;
   color: var(--sidebar-font);
+  opacity: 0.6;
 }
-.individual-plans-card {
+.individual-savingplan-card {
   margin-top: 2rem;
 }
-.individual-plans-card-header {
+.individual-savingplan-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0.5rem 0;
 }
-.individual-plans-card-amounts {
+.individual-savingplan-card-amounts {
   display: flex;
   justify-content: space-between;
   align-items: center;
