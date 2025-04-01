@@ -171,6 +171,85 @@ main {
 .overview-card {
   width: 70%;
 }
+.overview-card:hover {
+  transform: scale(1.01);
+  transition: 0.3s;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.individual-finance-card-active {
+  background-color: var(--see-all-font);
+}
+.individual-finance-card-active h4,
+.individual-finance-card-active span,
+.individual-finance-card-active .finance-card-amount,
+.individual-finance-card-active .finance-card-amount img {
+  color: var(--white-bg) !important;
+}
+
+#balance:hover,
+#saving:hover,
+#expenses:hover,
+#incomes:hover {
+  transition: 1s;
+  border: 1px solid #4c4c4c;
+  cursor: pointer;
+}
+.finance-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+.individual-finance-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  border: 1px solid var(--notification-icon);
+}
+.individual-finance-card hr {
+  margin: 1rem 0;
+}
+.finance-card-header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.finance-card-header > img {
+  border: 1px solid var(--notification-icon);
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.finance-card-title-desc h4 {
+  font-weight: 600;
+  color: var(--sidebar-font);
+  margin-bottom: 0.5rem;
+}
+.finance-card-title-desc > span {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.faded-text {
+  opacity: 0.6;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.finance-card-amount {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--sidebar-font);
+  letter-spacing: -2px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+}
 .saving-card {
   width: 30%;
 }
