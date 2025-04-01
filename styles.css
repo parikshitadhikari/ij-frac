@@ -174,6 +174,11 @@ main {
 .saving-card {
   width: 30%;
 }
+.saving-card:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
 .saving-card-header {
   display: flex;
   justify-content: space-between;
