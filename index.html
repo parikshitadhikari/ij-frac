@@ -279,7 +279,88 @@
       </section>
 
       <!-- Analytics and Transactions component -->
-      <section class="analytics-transactions"></section>
+      <section class="analytics-transactions">
+        <!-- Analytics component (Left) -->
+        <div class="analytics-card">
+          <header class="analytics-card-header">
+            <h3>Analytics</h3>
+            <section class="analytics-card-header-right">
+              <div class="analytics-label-div"><span id="blue-dot"></span>Label 1</div>
+              <div class="analytics-label-div"><span id="orange-dot"></span>Label 1</div>
+              <select name="timeframe" id="analytics-graph">
+                <option value="1">Weekly</option>
+                <option value="2">Monthly</option>
+                <option value="3">Yearly</option>
+              </select>
+            </section>
+          </header>
+        </div>
+        <!-- Transactions component (Right) -->
+        <div class="transaction-card">
+          <header class="transaction-card-header">
+            <h3>Recent Transaction</h3>
+            <button id="see-all-btn">See All</button>
+          </header>
+          <hr />
+          <!-- Individual transaction - figma -->
+          <section class="individual-transaction-card">
+            <img src="./assets/sidebar-icons/gallery.svg" alt="gallery" />
+            <!-- Details about transaction such as: name, date, amount, status -->
+            <div class="transaction-details">
+              <div class="transaction-name-date">
+                <h4>Figma</h4>
+                <h5>August 20, 2022</h5>
+              </div>
+              <div class="transaction-amount-status">
+                <span class="transaction-amount">$ 100</span>
+                <span class="transaction-status">Completed</span>
+              </div>
+            </div>
+          </section>
+          <!-- Individual transaction - youtube -->
+          <section class="individual-transaction-card">
+            <img src="./assets/sidebar-icons/gallery.svg" alt="gallery" />
+            <div class="transaction-details">
+              <div class="transaction-name-date">
+                <h4>Youtube</h4>
+                <h5>August 20, 2022</h5>
+              </div>
+              <div class="transaction-amount-status">
+                <span class="transaction-amount">$ 120</span>
+                <span class="transaction-status">Completed</span>
+              </div>
+            </div>
+          </section>
+          <!-- Individual transaction - spotify -->
+          <section class="individual-transaction-card">
+            <img src="./assets/sidebar-icons/gallery.svg" alt="gallery" />
+            <div class="transaction-details">
+              <div class="transaction-name-date">
+                <h4>Spotify</h4>
+                <h5>August 20, 2022</h5>
+              </div>
+              <div class="transaction-amount-status">
+                <span class="transaction-amount">$ 15</span>
+                <span class="transaction-status">Completed</span>
+              </div>
+            </div>
+          </section>
+          <!-- Individual transaction - freepik -->
+          <section class="individual-transaction-card">
+            <img src="./assets/sidebar-icons/gallery.svg" alt="gallery" />
+            <div class="transaction-details">
+              <div class="transaction-name-date">
+                <h4>Freepik</h4>
+                <h5>August 20, 2022</h5>
+              </div>
+              <div class="transaction-amount-status">
+                <span class="transaction-amount">$ 300</span>
+                <span class="transaction-status">Completed</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
     </main>
   </body>
   <script src="script.js"></script>

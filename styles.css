@@ -16,6 +16,7 @@
   --see-all-font: #4745a4;
   --yellow-progress: #f9ba33;
   --green-progress: #3bbb6e;
+  --status-font: #3bbb6e;
 }
 
 body {
@@ -152,8 +153,10 @@ main {
   color: #0d163a9f;
   transition: 0.5s;
 }
-/* Overview and Saving Plan css */
-.overview-savingplan {
+/* Overview + Saving Plan + Analytics + transaction css section */
+/* Flow: 1. Overview css, 2. Saving plan css, 3. Analytics css, 4. Transation css. PS: common styling classes are grouped together */
+.overview-savingplan,
+.analytics-transactions {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -162,16 +165,20 @@ main {
   width: 100%;
 }
 .overview-card,
-.savingplan-card {
+.savingplan-card,
+.analytics-card,
+.transaction-card {
   background-color: var(--white-bg);
   border-radius: 1rem;
   padding: 1rem;
   color: var(--sidebar-font);
 }
-.overview-card {
+.overview-card,
+.analytics-card {
   width: 70%;
 }
-.overview-card:hover {
+.overview-card:hover,
+.analytics-card:hover {
   transform: scale(1.01);
   transition: 0.3s;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -250,10 +257,12 @@ main {
   margin-top: 0.25rem;
 }
 /* saving plan css */
-.savingplan-card {
+.savingplan-card,
+.transaction-card {
   width: 30%;
 }
-.savingplan-card:hover {
+.savingplan-card:hover,
+.transaction-card:hover {
   transform: scale(1.01);
   transition: 0.3s;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -261,7 +270,8 @@ main {
 .savingplan-card hr {
   margin: 1rem 0;
 }
-.savingplan-card-header {
+.savingplan-card-header,
+.transaction-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -334,6 +344,65 @@ h5 {
 #charity-progress::-webkit-progress-value {
   background-color: var(--green-progress);
   border-radius: 5px;
+}
+/* Analytics css section */
+.analytics-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+.analytics-card-header-right {
+  display: flex;
+  gap: 2rem;
+}
+.analytics-label-div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+#blue-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--see-all-font);
+  border-radius: 50%;
+}
+#orange-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--yellow-progress);
+  border-radius: 50%;
+}
+/* Transactions css section */
+.individual-transaction-card {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.individual-transaction-card img {
+  background-color: var(--notification-icon);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.transaction-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.transaction-amount-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.transaction-amount {
+  color: var(--sidebar-font);
+  font-weight: 600;
+}
+.transaction-status {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--status-font);
 }
 /* Mobile and small tablets screen */
 @media (max-width: 768px) {
