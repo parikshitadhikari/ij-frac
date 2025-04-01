@@ -130,50 +130,53 @@
         <div class="saving-card">
           <header class="saving-card-header">
             <h3>SavingPlan</h3>
-            <button>See All</button>
+            <button id="see-all-btn">See All</button>
           </header>
           <hr />
+          <!-- individual plan - bali -->
           <div class="individual-plans-card">
             <header class="individual-plans-card-header">
               <h4>Bali Vacation</h4>
               <h5>Target: August 25 2022</h5>
             </header>
-            <div class="individual-plans-card-progress">
+            <div class="individual-plans-card-amounts">
               <span>
-                <span class="amount">$1950.21</span
+                <span class="amount">$1950,21</span
                 ><span class="total">/$4000</span>
               </span>
               <span class="percentage">48%</span>
             </div>
-            <progress value="1950.21" max="4000"></progress>
+            <progress value="1950.21" max="4000" id="bali-progress"></progress>
           </div>
+          <!-- individual plan - gadget -->
           <div class="individual-plans-card">
             <header class="individual-plans-card-header">
               <h4>New Gadget</h4>
               <h5>Target: August 25 2022</h5>
             </header>
-            <div class="individual-plans-card-progress">
+            <div class="individual-plans-card-amounts">
               <span>
-                <span class="amount">$790.21</span
+                <span class="amount">$790,21</span
                 ><span class="total">/$1000</span>
               </span>
               <span class="percentage">90%</span>
             </div>
-            <progress value="1950.21" max="4000"></progress>
+            <progress value="790.21" max="1000" id="gadget-progress"></progress>
           </div>
+          <!-- individual plan - charity -->
           <div class="individual-plans-card">
             <header class="individual-plans-card-header">
               <h4>Charity</h4>
               <h5>Target: August 25 2022</h5>
             </header>
-            <div class="individual-plans-card-progress">
+            <div class="individual-plans-card-amounts">
               <span>
                 <span class="amount">$32,111</span
                 ><span class="total">/$100</span>
               </span>
               <span class="percentage">32%</span>
             </div>
-            <progress value="1950.21" max="4000"></progress>
+            <progress value="32.111" max="100" id="charity-progress"></progress>
           </div>
         </div>
       </section>
