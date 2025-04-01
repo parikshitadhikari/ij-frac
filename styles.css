@@ -350,6 +350,7 @@ h5 {
 .analytics-card-header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 .analytics-card-header-right {
   display: flex;
@@ -417,6 +418,10 @@ h5 {
   font-weight: 600;
   font-size: 0.75rem;
   color: var(--status-font);
+}
+.chart-container {
+  width: 100%;
+  height: 300px;
 }
 /* Mobile and small tablets screen */
 @media (max-width: 768px) {
