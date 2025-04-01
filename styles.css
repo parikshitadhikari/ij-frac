@@ -155,8 +155,8 @@ main {
 /* Overview and Saving Plan css */
 .overview-saving {
   display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
   margin-top: 2rem;
   gap: 2rem;
   width: 100%;
@@ -200,7 +200,7 @@ main {
   grid-template-rows: repeat(2, 1fr); /* 2 rows */
   gap: 1rem;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .individual-finance-card {
   display: flex;
@@ -258,10 +258,15 @@ main {
   transition: 0.3s;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
+.saving-card hr{
+  margin: 1rem 0;
+}
 .saving-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* margin-bottom: 0.5rem; */
+  /* border: 1px solid var(--notification-icon); */
 }
 #see-all-btn {
   background-color: transparent;
@@ -293,7 +298,7 @@ h5 {
   color: var(--sidebar-font);
 }
 .individual-plans-card {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 .individual-plans-card-header {
   display: flex;

@@ -125,9 +125,9 @@
         <!-- Overview component (Left) -->
         <div class="overview-card">
           <h3>Overview</h3>
-          <!-- Your Balance, Savings, Expense, Income -->
+          <!-- Your Balance, Savings, Expense, Income: Below div represents all four (so, named as finance card) -->
           <div class="finance-card">
-            <!-- Your Balance Card -->
+            <!-- Your Balance Card i.e individual card (so, names ad individual-finance-card) -->
             <section
               class="individual-finance-card individual-finance-card-active"
               id="balance"
@@ -187,7 +187,7 @@
                       src="./assets/overview-icons/arrowyellow.svg"
                       alt="arr"
                     /><span class="faded-text"
-                      >2 % compared with last montg</span
+                      >2 % compared with last month</span
                     ></span
                   >
                 </div>
@@ -231,7 +231,7 @@
           </header>
           <hr />
           <!-- individual plan - bali -->
-          <div class="individual-plans-card">
+          <section class="individual-plans-card">
             <header class="individual-plans-card-header">
               <h4>Bali Vacation</h4>
               <h5>Target: August 25 2022</h5>
@@ -244,9 +244,9 @@
               <span class="percentage">48%</span>
             </div>
             <progress value="1950.21" max="4000" id="bali-progress"></progress>
-          </div>
+          </section>
           <!-- individual plan - gadget -->
-          <div class="individual-plans-card">
+          <section class="individual-plans-card">
             <header class="individual-plans-card-header">
               <h4>New Gadget</h4>
               <h5>Target: August 25 2022</h5>
@@ -259,9 +259,9 @@
               <span class="percentage">90%</span>
             </div>
             <progress value="790.21" max="1000" id="gadget-progress"></progress>
-          </div>
+          </section>
           <!-- individual plan - charity -->
-          <div class="individual-plans-card">
+          <section class="individual-plans-card">
             <header class="individual-plans-card-header">
               <h4>Charity</h4>
               <h5>Target: August 25 2022</h5>
@@ -274,7 +274,7 @@
               <span class="percentage">32%</span>
             </div>
             <progress value="32.111" max="100" id="charity-progress"></progress>
-          </div>
+          </section>
         </div>
       </section>
 
