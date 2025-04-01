@@ -13,6 +13,7 @@
   --content-bg: #f7f7fb;
   --search-font: #667085;
   --notification-icon: #dedede;
+  --see-all-font: #4745A4;
 }
 
 body {
@@ -92,11 +93,9 @@ main {
   border-radius: 6rem;
   padding: 1rem;
 }
-
 .search-icon {
   margin-right: 1rem;
 }
-
 .search-box input {
   flex-grow: 1;
   border: none;
@@ -129,7 +128,6 @@ main {
   cursor: pointer;
   transition: 0.3s;
 }
-
 .gallery-icon {
   background-color: var(--icon-bg);
   padding: 0.4rem;
@@ -152,7 +150,41 @@ main {
   color: #0d163a9f;
   transition: 0.5s;
 }
-
+/* Overview and Saving Plan css */
+.overview-saving {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-top: 2rem;
+  gap: 2rem;
+  width: 100%;
+}
+.overview-card,
+.saving-card {
+  background-color: var(--white-bg);
+  border-radius: 1rem;
+  padding: 1rem;
+  color: var(--sidebar-font);
+}
+.overview-card {
+  width: 70%;
+}
+.saving-card {
+  width: 30%;
+}
+.saving-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.saving-card-header button {
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--see-all-font);
+  cursor: pointer;
+}
 /* Mobile and small tablets screen */
 @media (max-width: 768px) {
   .sidebar {
