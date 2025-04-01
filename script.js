@@ -4,6 +4,7 @@ document.querySelectorAll(".sidebar-item").forEach((item) => {
     alert(` ${item.textContent.trim()} clicked!`);
   });
 });
+
 // adding event listener to navbar items
 document.querySelector(".header").addEventListener("click", (event) => {
   const target = event.target;
@@ -35,36 +36,36 @@ financeCards.forEach((card) => {
   });
 });
 
-// chart buildin using chart.js
+// chart building using chart.js
 document.addEventListener("DOMContentLoaded", function () {
   const ctx = document.getElementById("analyticsChart");
 
-  // Data for the chart
+  // data for the chart
   const data = {
     labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
     datasets: [
       {
         label: "Label 1",
-        data: [
-          13500, 11000, 6000, 9000, 15500, 13000, 21000, 8000, 19000, 13000,
-        ],
+        data: [13500, 7600, 13000, 9000, 15500, 13000, 21000],
         backgroundColor: "rgba(92, 107, 192, 0.2)",
         borderColor: "rgba(71, 69, 164, 1)",
         tension: 0.4,
         fill: true,
+        order: 2,
       },
       {
-        label: "Label 1",
-        data: [5000, 6000, 9500, 5500, 7000, 10500, 4500, 5000, 7000, 9000],
+        label: "Label 2",
+        data: [5000, 8000, 4000, 7000, 12000, 10500, 7000],
         backgroundColor: "rgba(249, 186, 51, 0.2)",
         borderColor: "rgba(249, 186, 51, 1)",
         tension: 0.4,
         fill: true,
+        order: 1,
       },
     ],
   };
 
-  // Confguration for the chart
+  // configuration for the chart
   const config = {
     type: "line",
     data: data,
@@ -127,6 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
 
-  // creating the chart the chart
+  // creating the chart
   new Chart(ctx, config);
 });
