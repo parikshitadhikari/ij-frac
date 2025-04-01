@@ -190,7 +190,7 @@ main {
 #saving:hover,
 #expenses:hover,
 #incomes:hover {
-  transition: 1s;
+  transition: 0.3s;
   border: 1px solid #4c4c4c;
   cursor: pointer;
 }
