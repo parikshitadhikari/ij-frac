@@ -5,7 +5,7 @@ document.querySelectorAll(".sidebar-item").forEach((item) => {
   });
 });
 // adding event listener to navbar items
-document.querySelector(".navbar").addEventListener("click", (event) => {
+document.querySelector(".header").addEventListener("click", (event) => {
   const target = event.target;
   if (target.classList.contains("search-icon")) {
     alert("Search icon clicked!");
@@ -20,4 +20,17 @@ document.querySelector(".navbar").addEventListener("click", (event) => {
       `User menu clicked: ${document.querySelector(".user-name").textContent}`
     );
   }
+});
+
+// adding event listener to finance cards to highlight the selected card
+const financeCards = document.querySelectorAll(".individual-finance-card");
+// adding click event listener to each card
+financeCards.forEach((card) => {
+  card.addEventListener("click", function () {
+    financeCards.forEach((c) => {
+      c.classList.remove("individual-finance-card-active");
+    });
+
+    this.classList.add("individual-finance-card-active");
+  });
 });
