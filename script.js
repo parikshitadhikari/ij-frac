@@ -169,3 +169,32 @@ document.addEventListener("DOMContentLoaded", function () {
     analyticsChart.update();
   });
 });
+
+// sidebar toggle functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const sidebar = document.querySelector(".sidebar");
+  const body = document.body;
+  // creating overlay element
+  const overlay = document.createElement("div");
+  overlay.className = "sidebar-overlay";
+  body.appendChild(overlay);
+
+  // toggling the sidebar function
+  function toggleSidebar() {
+    sidebar.classList.toggle("active");
+    hamburgerBtn.classList.toggle("active");
+    overlay.classList.toggle("active");
+
+    // when sidebar is active, prevent body from scrolling
+    if (sidebar.classList.contains("active")) {
+      body.style.position = "fixed";
+    } else {
+      body.style.position = "static";
+    }
+  }
+  // click event to hamburger button
+  hamburgerBtn.addEventListener("click", function (event) {
+    toggleSidebar();
+  });
+});
