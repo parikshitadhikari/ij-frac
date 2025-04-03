@@ -1,0 +1,423 @@
+/* reset padding and margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* variable declaration */
+:root {
+  --white-bg: #ffffff;
+  --light-grey: #d9d9d9;
+  --primary-blue: #0d163a;
+  --content-bg: #f7f7fb;
+  --dark-grey: #667085;
+  --notification-icon: #dedede;
+  --light-blue: #4745a4;
+  --yellow-progress: #f9ba33;
+  --green-progress: #3bbb6e;
+  --status-font: #3bbb6e;
+  --dropdown-font: #7c7c7c;
+}
+
+body {
+  display: flex;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+progress {
+  width: 100%;
+  height: 8px;
+  color: yellow;
+  background-color: yellow;
+  border: yellow;
+}
+/* webkit browsers- chrome, safari, edge */
+progress::-webkit-progress-bar {
+  background-color: var(--notification-icon); /* unfilled background color */
+  border-radius: 5px;
+}
+h4 {
+  font-weight: 500;
+  color: var(--primary-blue);
+}
+h5 {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--primary-blue);
+  opacity: 0.6;
+}
+/* css code for sidebar and its items */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--white-bg);
+  padding: 2rem;
+  width: 20%;
+}
+.icon {
+  width: 90%;
+  height: 2.75rem;
+  background-color: var(--light-grey);
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+  text-decoration: none;
+  color: var(--primary-blue);
+}
+.sidebar-item img {
+  width: 1.5rem;
+}
+.sidebar-items li {
+  margin: 0.25rem 0;
+}
+.sidebar-item:hover,
+.sidebar-item.active {
+  font-weight: 600;
+}
+.sidebar-divider {
+  opacity: 30%;
+  margin: 1.5rem 0;
+}
+/* pushes last section to bottom */
+#sidebar-bottom {
+  margin-top: auto;
+}
+
+/* css code for main-content */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background-color: var(--content-bg);
+  padding: 2rem;
+}
+/* header-navbar css codes */
+.header {
+  display: flex;
+  gap: 2rem;
+}
+.search-form {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  background-color: var(--white-bg);
+  border-radius: 6rem;
+  padding: 1rem;
+}
+.search-icon {
+  margin-right: 1rem;
+}
+.search-form input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--dark-grey);
+}
+.search-form input::placeholder {
+  color: var(--dark-grey);
+}
+/* notification, chat and profile css codes */
+.notification-chat {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--white-bg);
+  width: 30%;
+  border-radius: 6rem;
+}
+.notification-icon,
+.chat-icon {
+  border: 1px solid var(--notification-icon);
+  padding: 0.4rem 1rem;
+  border-radius: 6rem;
+}
+.notification-icon:hover,
+.chat-icon:hover {
+  background-color: var(--light-grey);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.gallery-icon {
+  background-color: var(--light-grey);
+  padding: 0.4rem;
+  border-radius: 50%;
+  border: 1px solid var(--light-grey);
+}
+.gallery-icon:hover {
+  background-color: var(--white-bg);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.user-menu {
+  color: var(--primary-blue);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.user-menu:hover {
+  cursor: pointer;
+  color: #0d163a9f;
+  transition: 0.5s;
+}
+/* Overview + Saving Plan + Analytics + transaction css section */
+/* Flow: 1. Overview css, 2. Saving plan css, 3. Analytics css, 4. Transation css. PS: common styling classes are grouped together */
+.overview-savingplan,
+.analytics-transactions {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 2rem;
+  gap: 2rem;
+  width: 100%;
+}
+.overview-card,
+.savingplan-card,
+.analytics-card,
+.transaction-card {
+  background-color: var(--white-bg);
+  border-radius: 1rem;
+  padding: 1rem;
+  color: var(--primary-blue);
+}
+.overview-card,
+.analytics-card {
+  width: 70%;
+}
+.overview-card:hover,
+.analytics-card:hover {
+  transform: scale(1.01);
+  transition: 0.3s;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.individual-finance-card-active {
+  background-color: var(--light-blue);
+}
+.individual-finance-card-active h4,
+.individual-finance-card-active span,
+.individual-finance-card-active .finance-card-amount,
+.individual-finance-card-active .finance-card-amount img {
+  color: var(--white-bg) !important;
+}
+#balance:hover,
+#saving:hover,
+#expenses:hover,
+#incomes:hover {
+  transition: 0.3s;
+  border: 1px solid #4c4c4c;
+  cursor: pointer;
+}
+.finance-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+.individual-finance-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  border: 1px solid var(--notification-icon);
+}
+.individual-finance-card hr {
+  margin: 1rem 0;
+}
+.finance-card-top-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.finance-card-top-container > img {
+  border: 1px solid var(--notification-icon);
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.finance-card-title-desc h4 {
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+.finance-card-title-desc > span {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.faded-text {
+  opacity: 0.6;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.finance-card-amount {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  letter-spacing: -2px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+}
+/* saving plan css */
+.savingplan-card,
+.transaction-card {
+  width: 30%;
+}
+.savingplan-card:hover,
+.transaction-card:hover {
+  transform: scale(1.01);
+  transition: 0.3s;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.savingplan-card hr {
+  margin: 1rem 0;
+}
+.savingplan-card-header,
+.transaction-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#see-all-btn {
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--light-blue);
+  cursor: pointer;
+}
+.individual-savingplan-card {
+  margin-top: 2rem;
+}
+.individual-savingplan-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.individual-savingplan-card-amounts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.amount {
+  font-size: 1.25rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+.total {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--primary-blue);
+  letter-spacing: -1px;
+  opacity: 50%;
+  margin-left: 0.1rem;
+}
+#bali-progress::-webkit-progress-value {
+  background-color: var(--light-blue); /* filled progress color */
+  border-radius: 5px;
+}
+#gadget-progress::-webkit-progress-value {
+  background-color: var(--yellow-progress);
+  border-radius: 5px;
+}
+#charity-progress::-webkit-progress-value {
+  background-color: var(--green-progress);
+  border-radius: 5px;
+}
+/* Analytics css section */
+.analytics-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.analytics-card-header-right {
+  display: flex;
+  gap: 2rem;
+}
+.analytics-card-header-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#blue-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--light-blue);
+  border-radius: 50%;
+}
+#orange-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--yellow-progress);
+  border-radius: 50%;
+}
+.analytics-card-header-label span {
+  font-weight: 500;
+  color: var(--primary-blue);
+  font-size: 0.9rem;
+}
+.analytics-card-header-select {
+  border: 1px solid var(--notification-icon);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  outline: none;
+  color: var(--dropdown-font);
+  font-size: 0.9rem;
+}
+/* Transactions css section */
+.individual-transaction-card {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.individual-transaction-card img {
+  background-color: var(--notification-icon);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.transaction-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.transaction-amount-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.transaction-amount {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+.transaction-status {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--status-font);
+}
+.chart-container {
+  width: 100%;
+  height: 300px;
+}

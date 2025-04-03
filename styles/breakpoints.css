@@ -1,0 +1,126 @@
+/* Mobile and small tablets screen */
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 1rem;
+    display: none;
+  }
+  main {
+    width: 100%;
+    padding: 1rem;
+  }
+  .header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .search-form {
+    width: 100%;
+  }
+  .notification-chat {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .notification-icon,
+  .chat-icon,
+  .gallery-icon {
+    padding: 0.3rem 0.3rem;
+  }
+  .overview-savingplan,
+  .analytics-transactions {
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .overview-card,
+  .savingplan-card,
+  .analytics-card,
+  .transaction-card {
+    width: 100%;
+  }
+  .finance-card {
+    grid-template-columns: 1fr; /* 1 columns */
+    grid-template-rows: repeat(4, 1fr); /* 4 rows */
+  }
+  .analytics-card-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+/* Bigger tablets screen */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: 25%;
+    padding: 2rem 0.5rem;
+  }
+  .sidebar-item {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  .sidebar-divider {
+    margin: 1rem 0;
+  }
+  main {
+    width: 75%;
+    padding: 2rem 1rem;
+  }
+  .header {
+    gap: 1rem;
+  }
+  .search-form {
+    width: 55%;
+  }
+  .notification-chat {
+    width: 45%;
+  }
+  .notification-icon,
+  .chat-icon,
+  .gallery-icon {
+    padding: 0.4rem 0.4rem;
+  }
+  .overview-savingplan,
+  .analytics-transactions {
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .overview-card,
+  .savingplan-card,
+  .analytics-card,
+  .transaction-card {
+    width: 100%;
+  }
+}
+/* Laptops screen */
+@media (min-width: 1025px) and (max-width: 1340px) {
+  h4 {
+    font-size: 0.9rem;
+  }
+  .sidebar-item {
+    padding: 0.5rem 0.4rem;
+  }
+  .header {
+    gap: 0.5rem;
+  }
+  .search-form {
+    width: 65%;
+  }
+  .notification-chat {
+    width: 35%;
+  }
+  .notification-icon,
+  .chat-icon,
+  .gallery-icon {
+    padding: 0.4rem 0.4rem;
+  }
+  .overview-savingplan,
+  .analytics-transactions {
+    gap: 1rem;
+  }
+  .overview-card,
+  .analytics-card {
+    width: 65%;
+  }
+  .savingplan-card,
+  .transaction-card {
+    width: 35%;
+  }
+}

@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intuji Frontend Associate Assignment</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/breakpoints.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -12,10 +13,10 @@
   </head>
   <body>
     <!-- Sidebar component -->
-    <aside class="sidebar">
+    <aside class="sidebar" role="navigation">
       <img
         src="./assets/sidebar-icons/gallery.svg"
-        alt="gallery"
+        alt="Intuji Logo"
         class="icon"
       />
       <!-- All items of sidebar -->
@@ -23,60 +24,64 @@
         <!-- List of top items -->
         <ul class="sidebar-items">
           <li>
-            <a href="#" class="sidebar-item active">
+            <a href="#dashboard" class="sidebar-item active">
               <img src="./assets/sidebar-icons/dashboard.svg" alt="dsh" />
-              Dashboard
+              <span>Dashboard</span>
             </a>
           </li>
           <li>
-            <a href="#" class="sidebar-item">
+            <a href="#schedule" class="sidebar-item">
               <img src="./assets/sidebar-icons/schedule.svg" alt="sch" />
-              Schedule
+              <span>Schedule</span>
             </a>
           </li>
           <li>
-            <a href="#" class="sidebar-item">
-              <img src="./assets/sidebar-icons/message.svg" alt="msg" /> Message
+            <a href="#message" class="sidebar-item">
+              <img src="./assets/sidebar-icons/message.svg" alt="msg" />
+              <span>Message</span>
             </a>
           </li>
           <li>
-            <a href="#" class="sidebar-item">
+            <a href="#analytics" class="sidebar-item">
               <img src="./assets/sidebar-icons/analytics.svg" alt="anlts" />
-              Analytics
+              <span>Analytics</span>
             </a>
           </li>
           <li>
-            <a href="#" class="sidebar-item">
-              <img src="./assets/sidebar-icons/team.svg" alt="team" /> Team
+            <a href="#team" class="sidebar-item">
+              <img src="./assets/sidebar-icons/team.svg" alt="team" />
+              <span>Team</span>
             </a>
           </li>
         </ul>
-        <hr />
+        <hr class="sidebar-divider" />
         <!-- List of middle items -->
         <ul class="sidebar-items">
           <li>
-            <a href="#" class="sidebar-item">
+            <a href="#profile" class="sidebar-item">
               <img src="./assets/sidebar-icons/profile.svg" alt="prfl" />
-              Profile
+              <span>Profile</span>
             </a>
           </li>
           <li>
-            <a href="#" class="sidebar-item">
+            <a href="#settings" class="sidebar-item">
               <img src="./assets/sidebar-icons/settings.svg" alt="stng" />
-              Settings
+              <span>Settings</span>
             </a>
           </li>
         </ul>
         <!-- List of bottom items -->
         <ul class="sidebar-items" id="sidebar-bottom">
           <li>
-            <a href="#" class="sidebar-item">
-              <img src="./assets/sidebar-icons/help.svg" alt="help" /> Help
+            <a href="#help" class="sidebar-item">
+              <img src="./assets/sidebar-icons/help.svg" alt="help" />
+              <span>Help</span>
             </a>
           </li>
           <li>
-            <a href="#" class="sidebar-item">
-              <img src="./assets/sidebar-icons/logout.svg" alt="lgt" /> Logout
+            <a href="#logout" class="sidebar-item">
+              <img src="./assets/sidebar-icons/logout.svg" alt="lgt" />
+              <span>Help</span>
             </a>
           </li>
         </ul>
@@ -88,14 +93,14 @@
       <!-- Header - Navbar component -->
       <header class="header">
         <!-- Search box div -->
-        <div class="search-box">
+        <form class="search-form">
           <img
             src="./assets/header-icons/search.svg"
             alt="search"
             class="search-icon"
           />
           <input type="text" placeholder="Search here..." />
-        </div>
+        </form>
         <!-- Notification, chat and profile div -->
         <div class="notification-chat">
           <img
@@ -128,11 +133,11 @@
           <!-- Your Balance, Savings, Expense, Income: Below div represents all four (so, named as finance card) -->
           <div class="finance-card">
             <!-- Your Balance Card i.e individual card (so, names ad individual-finance-card) -->
-            <section
+            <article
               class="individual-finance-card individual-finance-card-active"
               id="balance"
             >
-              <div class="finance-card-header">
+              <div class="finance-card-top-container">
                 <img src="./assets/overview-icons/balance.svg" alt="balance" />
                 <div class="finance-card-title-desc">
                   <h4>Your Balance</h4>
@@ -151,11 +156,11 @@
                 <span>$ 28,891.138</span>
                 <span id="right-arrow"> &#8594; </span>
               </span>
-            </section>
+            </article>
 
             <!-- Saving Card -->
-            <section class="individual-finance-card" id="saving">
-              <div class="finance-card-header">
+            <article class="individual-finance-card" id="saving">
+              <div class="finance-card-top-container">
                 <img src="./assets/overview-icons/saving.svg" alt="saving" />
                 <div class="finance-card-title-desc">
                   <h4>Saving</h4>
@@ -174,11 +179,11 @@
                 <span>$ 1,050.448</span>
                 <span id="right-arrow"> &#8594; </span>
               </span>
-            </section>
+            </article>
 
             <!-- Expenses Card -->
-            <section class="individual-finance-card" id="expenses">
-              <div class="finance-card-header">
+            <article class="individual-finance-card" id="expenses">
+              <div class="finance-card-top-container">
                 <img src="./assets/overview-icons/expense.svg" alt="expense" />
                 <div class="finance-card-title-desc">
                   <h4>Expenses</h4>
@@ -197,11 +202,11 @@
                 <span>$ 200.31</span>
                 <span id="right-arrow"> &#8594; </span>
               </span>
-            </section>
+            </article>
 
             <!-- Incomes Card -->
-            <section class="individual-finance-card" id="incomes">
-              <div class="finance-card-header">
+            <article class="individual-finance-card" id="incomes">
+              <div class="finance-card-top-container">
                 <img src="./assets/overview-icons/income.svg" alt="income" />
                 <div class="finance-card-title-desc">
                   <h4>Income</h4>
@@ -220,7 +225,7 @@
                 <span>$ 21,121.0</span>
                 <span id="right-arrow"> &#8594; </span>
               </span>
-            </section>
+            </article>
           </div>
         </div>
         <!-- Saving plan component (Right) -->
@@ -231,7 +236,7 @@
           </header>
           <hr />
           <!-- individual plan - bali -->
-          <section class="individual-savingplan-card">
+          <article class="individual-savingplan-card">
             <header class="individual-savingplan-card-header">
               <h4>Bali Vacation</h4>
               <h5>Target: August 25 2022</h5>
@@ -244,9 +249,9 @@
               <span class="percentage">48%</span>
             </div>
             <progress value="1950.21" max="4000" id="bali-progress"></progress>
-          </section>
+          </article>
           <!-- individual plan - gadget -->
-          <section class="individual-savingplan-card">
+          <article class="individual-savingplan-card">
             <header class="individual-savingplan-card-header">
               <h4>New Gadget</h4>
               <h5>Target: August 25 2022</h5>
@@ -259,9 +264,9 @@
               <span class="percentage">90%</span>
             </div>
             <progress value="790.21" max="1000" id="gadget-progress"></progress>
-          </section>
+          </article>
           <!-- individual plan - charity -->
-          <section class="individual-savingplan-card">
+          <article class="individual-savingplan-card">
             <header class="individual-savingplan-card-header">
               <h4>Charity</h4>
               <h5>Target: August 25 2022</h5>
@@ -274,7 +279,7 @@
               <span class="percentage">32%</span>
             </div>
             <progress value="32.111" max="100" id="charity-progress"></progress>
-          </section>
+          </article>
         </div>
       </section>
 
@@ -302,9 +307,9 @@
               </select>
             </section>
           </header>
-          <div class="chart-container">
+          <figure class="chart-container">
             <canvas id="analyticsChart"></canvas>
-          </div>
+          </figure>
         </div>
         <!-- Transactions component (Right) -->
         <div class="transaction-card">
@@ -314,7 +319,7 @@
           </header>
           <hr />
           <!-- Individual transaction - figma -->
-          <section class="individual-transaction-card">
+          <article class="individual-transaction-card">
             <img src="./assets/sidebar-icons/gallery.svg" alt="gallery" />
             <!-- Details about transaction such as: name, date, amount, status -->
             <div class="transaction-details">
@@ -327,9 +332,9 @@
                 <span class="transaction-status">Completed</span>
               </div>
             </div>
-          </section>
+          </article>
           <!-- Individual transaction - youtube -->
-          <section class="individual-transaction-card">
+          <article class="individual-transaction-card">
             <img src="./assets/sidebar-icons/gallery.svg" alt="gallery" />
             <div class="transaction-details">
               <div class="transaction-name-date">
@@ -341,9 +346,9 @@
                 <span class="transaction-status">Completed</span>
               </div>
             </div>
-          </section>
+          </article>
           <!-- Individual transaction - spotify -->
-          <section class="individual-transaction-card">
+          <article class="individual-transaction-card">
             <img src="./assets/sidebar-icons/gallery.svg" alt="gallery" />
             <div class="transaction-details">
               <div class="transaction-name-date">
@@ -355,9 +360,9 @@
                 <span class="transaction-status">Completed</span>
               </div>
             </div>
-          </section>
+          </article>
           <!-- Individual transaction - freepik -->
-          <section class="individual-transaction-card">
+          <article class="individual-transaction-card">
             <img src="./assets/sidebar-icons/gallery.svg" alt="gallery" />
             <div class="transaction-details">
               <div class="transaction-name-date">
@@ -369,7 +374,7 @@
                 <span class="transaction-status">Completed</span>
               </div>
             </div>
-          </section>
+          </article>
         </div>
       </section>
     </main>
