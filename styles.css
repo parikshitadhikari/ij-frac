@@ -515,17 +515,37 @@ h5 {
   }
 }
 /* Laptops screen */
-@media (min-width: 1024px) and (max-width: 1340px) {
-  hr {
-    margin: 1rem 0;
-  }
+@media (min-width: 1025px) and (max-width: 1340px) {
   .sidebar-item {
-    padding: 0.75rem 0.5rem;
+    padding: 0.5rem 0.4rem;
+  }
+  .header {
+    gap: 0.5rem;
   }
   .search-box {
-    width: 60%;
+    width: 65%;
   }
   .notification-chat {
-    width: 40%;
+    width: 35%;
+  }
+  .notification-icon,
+  .chat-icon,
+  .gallery-icon {
+    padding: 0.4rem 0.4rem;
+  }
+  .overview-savingplan,
+  .analytics-transactions {
+    gap: 1rem;
+  }
+  .overview-card,
+  .analytics-card {
+    width: 65%;
+  }
+  .savingplan-card,
+  .transaction-card {
+    width: 35%;
+  }
+  h4{
+    font-size: 0.9rem;
   }
 }
