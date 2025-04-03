@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Intuji Frontend Associate Assignment</title>
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/breakpoints.css" />
@@ -27,6 +30,7 @@
             <a href="#dashboard" class="sidebar-item active">
               <img src="./assets/sidebar-icons/dashboard.svg" alt="dsh" />
               <span>Dashboard</span>
+              <span class="vertical-blue-line"></span>
             </a>
           </li>
           <li>
@@ -81,18 +85,12 @@
           <li>
             <a href="#logout" class="sidebar-item">
               <img src="./assets/sidebar-icons/logout.svg" alt="lgt" />
-              <span>Help</span>
+              <span>Logout</span>
             </a>
           </li>
         </ul>
       </nav>
     </aside>
-    <!-- Hamburger menu button -->
-    <button class="hamburger-menu" id="hamburgerBtn">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
     <!-- Main content wrapper (right side content)-->
     <main class="content">
       <!-- Header - Navbar component -->
@@ -383,6 +381,12 @@
         </div>
       </section>
     </main>
+    <!-- Hamburger menu button -->
+    <button class="hamburger-menu" id="hamburgerBtn">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
