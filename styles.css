@@ -43,7 +43,7 @@ body {
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  height: 100%;
 }
 ul {
   list-style: none;
