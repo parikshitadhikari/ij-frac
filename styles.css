@@ -471,25 +471,47 @@ h5 {
   }
 }
 /* Bigger tablets screen */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .sidebar {
+    width: 25%;
     padding: 2rem 0.5rem;
   }
   .sidebar-item {
-    padding: 0.75rem 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
   hr {
     margin: 1rem 0;
   }
   main {
+    width: 75%;
     padding: 2rem 1rem;
   }
   .header {
     gap: 1rem;
   }
-  .search-box,
+  .search-box {
+    width: 55%;
+  }
   .notification-chat {
-    width: 50%;
+    width: 45%;
+  }
+  .notification-icon,
+  .chat-icon,
+  .gallery-icon {
+    padding: 0.4rem 0.4rem;
+  }
+  .overview-savingplan,
+  .analytics-transactions {
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .overview-card,
+  .savingplan-card,
+  .analytics-card,
+  .transaction-card {
+    width: 100%;
   }
 }
 /* Laptops screen */
